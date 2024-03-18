@@ -984,6 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookies: 0
+  cookieCounterText: {fileID: 474122526}
 --- !u!4 &2131963680
 Transform:
   m_ObjectHideFlags: 0
