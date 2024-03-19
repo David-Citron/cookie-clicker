@@ -8,12 +8,14 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private int cookies;
     [SerializeField] private TMP_Text cookieCounterText;
     [SerializeField] private int passiveIncome;
+    [SerializeField] private int clickMultiplier;
 
     // Start is called before the first frame update
     void Start()
     {
         cookies = 0;
         passiveIncome = 0;
+        clickMultiplier = 1;
         UpdateCookieCounter();
         StartCoroutine(PassiveIncome());
     }
@@ -26,7 +28,7 @@ public class PlayerScript : MonoBehaviour
 
     public void AddCookie()
     {
-        cookies++;
+        cookies += clickMultiplier;
         UpdateCookieCounter();
     }
 
@@ -52,6 +54,16 @@ public class PlayerScript : MonoBehaviour
             yield return new WaitForSecondsRealtime(1);
             cookies += passiveIncome;
             UpdateCookieCounter();
+        }
+    }
+
+    public void BuyUprade2()
+    {
+        if (cookies >= 10)
+        {
+            cookies -= 10;
+            UpdateCookieCounter();
+            clickMultiplier++;
         }
     }
 }

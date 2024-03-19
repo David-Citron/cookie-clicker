@@ -655,7 +655,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2131963679}
         m_TargetAssemblyTypeName: PlayerScript, Assembly-CSharp
-        m_MethodName: BuyUpgrade
+        m_MethodName: BuyUprade2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1792,6 +1792,7 @@ MonoBehaviour:
   cookies: 0
   cookieCounterText: {fileID: 474122526}
   passiveIncome: 0
+  clickMultiplier: 0
 --- !u!4 &2131963680
 Transform:
   m_ObjectHideFlags: 0
